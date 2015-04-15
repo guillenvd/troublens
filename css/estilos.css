@@ -1,0 +1,379 @@
+@font-face{
+    font-family: 'SourceSansPro-Regular';
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+    src: url(../fonts/SourceSansPro-Regular.eot) format(eot),
+         url(.../fonts/SourceSansPro-Regular.svg) format(svg);
+}
+@font-face{
+    font-family: 'SourceSansPro-ExtraLight';
+    src: url(../fonts/SourceSansPro-ExtraLight.ttf);
+    src: url(../fonts/SourceSansPro-ExtraLight.eot) format(eot),
+         url(../fonts/SourceSansPro-ExtraLight.svg) format(svg);
+}
+@font-face{
+    font-family: 'SourceSansPro-Bold';
+    src: url(../fonts/SourceSansPro-Bold.ttf);
+    src: url(../fonts/SourceSansPro-Bold.eot) format(eot),
+         url(../fonts/SourceSansPro-Bold.svg) format(svg);
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: SourceSansPro-Regular, "Source Sans Pro", Helvetica;
+}
+
+body{
+	background: #FFFFFA;
+	font-family: SourceSansPro-Regular, "Source Sans Pro", Helvetica;
+}
+
+
+header{
+    max-width: 100%;
+    text-align: center;
+    background: #00eba6 url(../img/colors-bar.png);
+   	background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+header .bt-menu{
+	text-align: left;
+}
+
+header nav{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background: #00eba6 url(../img/colors-bar.png);
+   	background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+.menu_bar span{
+	display: none;
+}
+
+
+a{
+	text-decoration: none;
+	color: #1b201f;
+	font-weight: bold;
+}
+
+header nav ul{
+	overflow: hidden;
+	list-style: none;
+}
+
+header nav ul li {
+	float: left;
+}
+
+header nav ul li a{
+	color:  #0f5b4c;
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+header nav ul li span {
+	margin-right:  10px;
+}
+
+header nav ul li a:hover {
+	background: #00de96;
+	height: .8em;
+}
+section#contenido{
+	padding-top: .5px;
+	background: #fff;
+	width: 100%;
+	height: auto;
+}	
+section .noticia h1, p{
+	text-align: center;
+	
+}
+section a{
+	font-weight: normal;
+}
+.noticia img{
+	float: left;
+	width: 10%;
+    height: 100%;
+}
+.noticia {
+	width: 100%;
+	height: 5em;
+	background: #FFF;
+	border-bottom: 0.1em inset #abc1b2;
+}
+
+.noticia:hover{
+		background: #f4f4f4;
+	}
+
+footer{
+	position:fixed; 
+	bottom:0px; 
+	left:0px; 
+	width:100%; 
+	color:#CCC; 
+	background: #333; 
+	padding:5px;
+	text-align: center;
+}
+
+.fade{
+    opacity: 1;
+    filter:  alpha(opacity=10);
+        -ms-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        -wekit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+
+}
+
+.fade:hover{
+    opacity: 0.7;
+    filter:  alpha(opacity=7);
+        -ms-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out
+        -wekit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+/*--------------------------------FORMULARIO REGISTRO-----------------------*/
+
+	section#contenido-form section#formulario{
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	color: #1b201f;
+	}
+
+	section#contenido-form{
+		text-align: center;
+	}
+
+	section#formulario{ 
+		/*background: #c3c3c3;*/
+		margin: 5px;
+		width: 50%;
+		height: auto;
+		font-size: 20px;
+	}
+
+	section#formulario a label{
+		font-size: 13px;
+		text-align: center;
+	}
+
+	section#formulario img{
+		margin: 0 auto;
+	}
+
+	label{
+		text-align: left;
+	}
+
+	input{
+		width: 95%;
+		height: 20px;
+		padding: 7px;
+   		-webkit-border-radius: 5px;
+   		-moz-border-radius: 5px;
+   		border-radius: 5px;
+  		border: 2px solid #BDC2C9;
+	}
+
+	.btn{
+		margin: 5px;
+		float: right;
+		width: 10em;
+		height: 3.5em;
+		background: #FFBF00;
+		font-weight: bold;
+	}
+
+	section#formulario label, input{
+		display: block;
+	}
+
+/*-------------------------------- RESPONSIVE DESIGN-----------------------*/
+
+@media screen and (max-width: 800px){
+	header{
+		width: 100%;
+		position: fixed;
+	}
+	
+	header nav{
+		width: 35%;
+		height: 100%;
+		left: -100%;
+		margin: 0;
+		position: fixed;
+	}
+
+	header nav ul li{
+		display: block;
+		float: none;
+		border-bottom: 1px solid rgba(255,255,255,.3);
+		text-align: left;
+	}
+	header nav ul li a:hover {
+		background: #00de96;
+		height: auto;
+	}
+	.colores{
+		height: 8px;
+		background: #00eba6 url(../img/colors-bar.png);
+   	 	background-position: bottom;
+    	background-repeat: repeat-x;
+	}
+
+	.menu_bar{
+		display: block;
+		width: 100%;
+	}
+
+	.menu_bar .bt-menu{
+		display: block;
+		padding: 20px;
+		background: #00eba6;
+		color: #FFF;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 25px;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+	.menu_bar span{
+		display: block;
+	}
+
+	.menu_bar span{
+		float: right;
+		font-size: 40px;
+
+	}
+
+	section#contenido, section#contenido-form{
+		margin: 0 auto;
+		padding-top: 7em;
+	}
+	section#contenido-form{
+		text-align: center;
+	}
+
+	section#formulario{ 
+		/*background: #c3c3c3;*/
+		margin: 5px;
+		width: 50%;
+		height: auto;
+		font-size: 20px;
+	}
+
+	section#formulario a label{
+		font-size: 13px;
+		text-align: center;
+	}
+
+	section#formulario img{
+		margin: 0 auto;
+	}
+
+	label{
+		text-align: left;
+	}
+
+	input{
+		width: 95%;
+		height: 20px;
+		padding: 7px;
+   		-webkit-border-radius: 5px;
+   		-moz-border-radius: 5px;
+   		border-radius: 5px;
+  		border: 2px solid #BDC2C9;
+	}
+
+	.btn{
+		margin: 5px;
+		float: right;
+		width: 10em;
+		height: 3.5em;
+		background: #FFBF00;
+		font-weight: bold;
+	}
+
+	section#formulario label, input{
+		display: block;
+	}
+
+	section .noticia h1, p{
+		text-align: center;
+	}
+
+	.noticia {
+		width: 100%;
+		height: 5em	;
+		background: #FFF;
+		border-bottom: 0.1em inset #abc1b2;
+	}
+	.noticia:hover{
+		background: #f4f4f4;
+	}
+	.noticia img{
+		float: left;
+		width: 10%;
+    	height: 100%;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.noticia img{
+		width: 20%;
+		height: 100%;
+	}
+	section .noticia h1, p{
+		font-size: 15px;
+	}
+	.noticia {
+		height: 6em	;
+	}
+
+}
+
+@media screen and (max-width: 350px){
+	header a img{
+		width: 70%;
+	}
+	section{
+		padding-top: 7em;
+	}
+	section#formulario{
+		padding-top: 10px;
+	}
+
+	.noticia img{
+		width: 20%;
+		height: 100%
+	}
+	
+	section .noticia p{
+		font-size: 12px;
+	}
+
+	input{
+		width: 20em;
+	}
+	.btn{
+		width: 25em;
+	}
+
+
+}
