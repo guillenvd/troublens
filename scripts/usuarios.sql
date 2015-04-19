@@ -1,8 +1,8 @@
-DROP TABLE usuarios;
-DROP TABLE reportes;
-DROP TABLE dependencia;
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS reportes;
+DROP TABLE IF EXISTS dependencia;
 CREATE TABLE usuarios (
-	id_usuario 	INT PRIMARY KEY, 
+	id_usuario 	INT PRIMARY KEY AUTO_INCREMENT, 
 	nombre 		VARCHAR(75),
 	correo 		VARCHAR(75),
 	contrasena 	VARCHAR(75),

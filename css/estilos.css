@@ -47,6 +47,7 @@ header nav{
 	background: #00eba6 url(../img/colors-bar.png);
    	background-position: bottom;
     background-repeat: repeat-x;
+    text-align: center !important;
 }
 
 .menu_bar span{
@@ -67,14 +68,18 @@ header nav ul{
 
 header nav ul li {
 	float: left;
+	display: inline-block;
+	text-align: center;
+
 }
 
 header nav ul li a{
 	color:  #0f5b4c;
 	padding: 20px;
-	display: block;
+	display: inline-block;
 	text-decoration: none;
 	font-weight: normal;
+	text-align: center;
 }
 
 header nav ul li span {

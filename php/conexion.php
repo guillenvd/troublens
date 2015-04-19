@@ -1,16 +1,8 @@
 <?php
-/*
-//Conexion de Manera Local
 	$host = 'localhost';
 	$user = 'root';
 	$pw	  = '';
-	$db   = 'vantest';
-*/
-//Conexion con servidor Externo Informatux
-	$host = 'infor011.mysql.guardedhost.com';
-	$user = 'infor011_igastel';
-	$pw	  = '47mu3JbBp2';
-	$db   = 'infor011_igastelum';
+	$db   = 'troublens';
 
 			$conexion = mysqli_connect($host,$user,$pw,$db);
 			if (mysqli_connect_errno()){

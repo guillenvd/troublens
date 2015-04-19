@@ -6,15 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-</head>
-<body>
 	<header>
 		<div class="menu_bar">
 		<a href="#menu" class="bt-menu"><img class="fade" src="img/Logo-Troublens.png"><span class="icon-menu"></span></a>
 		</div>
 		<div class="colores"></div>
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="css/styleImg.css" rel="stylesheet">
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
 		<nav>
 			<ul>
 				<li><a href="index.html"><span class="icon-home3"></span>Inicio</a></li>
@@ -26,11 +29,20 @@
 	</header>
 	<!-- /header -->
 <section id="contenido-form">
+<br>
 		<section id="formulario">
-			<form method="post" action="php/env_registro.php">
-				<a href="#"><img src="img/van.png"><label>Foto de Perfil...</label></a>
-				<label for="email">Id:<span class="required"></span></label> 
-			    <input type="id" id="id" name="id" value="" required="required" /> 
+			<form action="php/uploadphp.php" enctype="multipart/form-data"  method="post" >
+    		<center>
+    			<div id="preview">
+        			<img id="previewimg" src="img/user.png">
+        			<img id="deleteimg" width="50px;" src="img/delete.png">
+    			</div>
+
+    			<div id="upload" >
+        			<input id="file" name="file" type="file" >
+
+    			</div>
+    		</center>
 				<label for="name">Nombre:<span class="required"></span></label> 
 			    <input type="text" id="name" name="name" value="" placeholder="Ej. Jesus Romero" required="required" autofocus="autofocus" /> 
 			    <label for="email">Correo:<span class="required"></span></label> 
@@ -41,16 +53,12 @@
 			</form>
 		</section>
 </section>
-<!--<footer>
-	<p><a href="#"><img onclick="myFunction()" src="img/favicon-55.png" alt=""></a></p>
-<script>
-function myFunction() {
-    alert("Abrir Fomulario para Reporte");
-}
-</script>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/menu.js"></script>
+<script type="text/javascript">
+	
+
+</script>
 </body>
 </html>
