@@ -155,22 +155,31 @@ footer{
 	text-align: justify;
 	padding: 30px;
 	margin: 30px solid;
+	-webkit-animation-name: acercaTitulo;
+   	-webkit-animation-duration: 2s;
 }
 
 .acercaTitulo {
 	font-size: 35px;
 	text-align: left;
+	-webkit-animation-name: acercaTitulo;
+   	-webkit-animation-duration: 2s;
 }
 
 #anim {
-   	-webkit-animation-name: example;
+   	-webkit-animation-name: acerca;
    	-webkit-animation-duration: 2s;
    	animation-timing-function: ease-in;
    	width: 12%;
    	height: 12%;
 }
 
-@-webkit-keyframes example {
+@-webkit-keyframes acercaTitulo {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@-webkit-keyframes acerca {
     from {
     	-ms-transform: rotate(0deg);
     	-webkit-transform: rotate(0deg);
