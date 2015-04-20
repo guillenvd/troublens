@@ -18,17 +18,12 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
-		<nav>
-			<ul>
-				<li><a href="index.html"><span class="icon-home3"></span>Inicio</a></li>
-				<li><a href="registrar.html"><span class="icon-user"></span>¡Regístrate!</a></li>
-				<li><a href="#"><span class="icon-pencil"></span>Directorio</a></li>
-				<li><a href="acerca.html"><span class="icon-book"></span>Acerca</a></li>
-			</ul>
-		</nav>	
+		<nav id="MenuText">
+            
+        </nav>  
 	</header>
 	<!-- /header -->
-<section id="contenido-form">
+<section id="contenido-form" style="display: none">
 <br>
 		<section id="formulario">
 			<form action="php/uploadphp.php" enctype="multipart/form-data"  method="post" >
@@ -57,7 +52,7 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/menu.js"></script>
 <script type="text/javascript">
-	
+     $("#contenido-form" ).show("slow");
 
 </script>
 </body>
