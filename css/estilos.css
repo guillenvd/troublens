@@ -47,7 +47,6 @@ header nav{
 	background: #00eba6 url(../img/colors-bar.png);
    	background-position: bottom;
     background-repeat: repeat-x;
-    text-align: center !important;
 }
 
 .menu_bar span{
@@ -67,19 +66,16 @@ header nav ul{
 }
 
 header nav ul li {
-	float: left;
+	float: center;
 	display: inline-block;
-	text-align: center;
-
 }
 
 header nav ul li a{
 	color:  #0f5b4c;
 	padding: 20px;
-	display: inline-block;
+	display: block;
 	text-decoration: none;
 	font-weight: normal;
-	text-align: center;
 }
 
 header nav ul li span {
@@ -150,48 +146,6 @@ footer{
         -wekit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-
-.acerca {
-	text-align: justify;
-	padding: 30px;
-	margin: 30px solid;
-	-webkit-animation-name: acercaTitulo;
-   	-webkit-animation-duration: 2s;
-}
-
-.acercaTitulo {
-	font-size: 35px;
-	text-align: left;
-	-webkit-animation-name: acercaTitulo;
-   	-webkit-animation-duration: 2s;
-}
-
-#anim {
-   	-webkit-animation-name: acerca;
-   	-webkit-animation-duration: 2s;
-   	animation-timing-function: ease-in;
-   	width: 12%;
-   	height: 12%;
-}
-
-@-webkit-keyframes acercaTitulo {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-@-webkit-keyframes acerca {
-    from {
-    	-ms-transform: rotate(0deg);
-    	-webkit-transform: rotate(0deg);
-    	transform: rotate(0deg);
-    }
-
-    to {
-    	-ms-transform: rotate(360deg);
-    	-webkit-transform: rotate(360deg);
-    	transform: rotate(360deg); 
-    }
-}
 /*--------------------------------FORMULARIO REGISTRO-----------------------*/
 
 	section#contenido-form section#formulario{
@@ -248,6 +202,47 @@ footer{
 	section#formulario label, input{
 		display: block;
 	}
+
+/*--------------------CONTENIDO DEL DIRECTORIO --------------*/
+
+section#directorio{
+	margin: 3em 3em -2em 3em;
+	display: block;
+	padding-bottom: 7em;	
+}
+
+section#directorio img.logo{
+	float: left;
+	width: 10%;
+}
+section#directorio img.map{
+	float: right;
+	width: 50%;
+}
+section#directorio h1{
+	font-size: 2.8em;
+	color: #424242;
+}
+section#directorio p.direc{
+	text-align: left;
+	padding-left: 10em;
+	margin: 0; 
+	color: #585858;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-------------------------------- RESPONSIVE DESIGN-----------------------*/
 
