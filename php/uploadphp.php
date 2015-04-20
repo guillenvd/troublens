@@ -51,8 +51,8 @@ if (true)
              } 
          else 
              {  /*renombrar archivo*/
-                  move_uploaded_file($_FILES["file"]["tmp_name"], "../upload/" . $_FILES["file"]["name"]);
-                    rename("../upload/".$_FILES["file"]["name"],"../upload/".$id.".jpg"  );
+                  move_uploaded_file($_FILES["file"]["tmp_name"], "../img/upload/" . $_FILES["file"]["name"]);
+                    rename("../img/upload/".$_FILES["file"]["name"],"../img/upload/".$id.".jpg"  );
             }
          }
    } 
