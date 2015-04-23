@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
 	<META charset="UTF-8">
 	<title>Menu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -8,12 +8,51 @@
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	
-</head>
-<body>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    alert("Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude); 
+}
+</script>
+<script>
+// This example adds a marker to indicate the position
+// of Bondi Beach in Sydney, Australia
+function initialize(lat,lon,string) {
+  var mapOptions = {
+    zoom: 15,
+    center: new google.maps.LatLng(lat,lon)
+  }
+  var map = new google.maps.Map(document.getElementById('googleMap'),
+                                mapOptions);
+
+  var image = 'img/favicon-55.png';
+  var myLatLng = new google.maps.LatLng(lat,lon);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+
+  var infowindow = new google.maps.InfoWindow({ content:string });
+  google.maps.event.addListener(beachMarker, 'click', function(){ infowindow.open(map,beachMarker); });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+	</head>
+<body onload="initialize(31.8089261,-116.5948495);">
 	<header>
 		<div class="menu_bar">
-		<a href="#menu" class="bt-menu"><img class="fade" src="img/Logo-Troublens.png"><span class="icon-menu"></span></a>
+		  <a href="#menu" class="bt-menu"><img class="fade" src="img/Logo-Troublens.png"><span class="icon-menu"></span></a>
 		</div>
 		<div class="colores"></div>
 		<nav id="MenuText">
@@ -21,22 +60,43 @@
 		</nav>	
 	</header>
 	<!-- /header -->
-<section id="contenido">
-	<section id="directorio">
-		<img src="img/directorio/bomberios1.png" class="logo">
-		<img src="img/mapa.jpg" class="map">
-		<h1>Cuerpo de Bomberos</h1>
-		<p class="direc">Calle Boulevard Zertuche, No. 3618 Col. Valle Dorado<br>Tel. 172-17-98<br>Email bomberosensenada@gmail.com</p>
-	</section>
-	<section id="directorio">
-		<img src="img/directorio/policia.png" class="logo">
-		<img src="img/mapa.jpg" class="map">
-		<h1>Policía Municipal</h1>
-		<p class="direc">Calle Boulevard Zertuche, No. 3618 Col. Valle Dorado<br>Tel. 066<br>Email policiajudicial@gmail.com</p>
-	</section>
+	<div class="row">
 
-</section>
+  		<div class="col-md-6">
+			<section id="contenido">
+				<div id="Layer1" style="width:100%; height:500px; overflow: scroll;">
+					<section id="directorio" styl="Border">
+						<div onclick="initialize(31.8111414,-116.5960362,'nuevo1');">
+							<img src="img/directorio/bomberios1.png" class="logo">
+							<h1>Cuerpo de Bomberos</h1>
+							<p class="direc">Calle Boulevard Zertuche, No. 3618 Col. Valle Dorado<br>Tel. 172-17-98<br>Email bomberosensenada@gmail.com</p>
+						</div>
+						<br>
+					</section>
+
+                    <section id="directorio">
+                        <div onclick="initialize(31.8133269,-116.5969063,'nuevo2');">
+                          <img src="img/directorio/policia.png" class="logo">
+                          <h1>Policía Municipal</h1>
+                          <p class="direc">Calle Boulevard Zertuche, No. 3618 Col. Valle Dorado<br>Tel. 066<br>Email policiajudicial@gmail.com</p>
+                       </div>
+                    </section>
+                    <section id="directorio">
+                        <div onclick="initialize(31.8133269,-116.5969063,'nuevo2');">
+                          <img src="img/directorio/policia.png" class="logo">
+                          <h1>Policía Municipal</h1>
+                          <p class="direc">Calle Boulevard Zertuche, No. 3618 Col. Valle Dorado<br>Tel. 066<br>Email policiajudicial@gmail.com</p>
+                       </div>
+                    </section>
+				</div>
+			</section>
+		</div>
+        <div class="col-md-4">
+            <div id="googleMap" style="width:600px;height:500px; z-index:2; margin-left:0;"></div>
+        </div>
+	</div>
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/menu.js"></script>
+
 </body>
 </html>
