@@ -10,23 +10,23 @@ include("conexion.php");
     mysql_select_db($db, $conexion) or die("Problemas al conectar con la BD");
     mysql_query("INSERT INTO usuarios (nombre,correo,contrasena) VALUES ('$_POST[name]','$_POST[email]', '$_POST[passwd]')", $conexion);
          $id = mysql_insert_id();
-      echo "<br>datos insertados correctamente";
-
         $conn = mysqli_connect($host, $user, $pw, $db);
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo $id;
         $sql = "UPDATE usuarios SET foto='".$id.".jpg' WHERE id_usuario='".$id."' ";
         if (mysqli_query($conn, $sql)) {
-            echo "Record updated successfully";
+          echo "<script type=\"text/javascript\">
+                  alert('alta exitosa');
+                  location.href = \"../index.html\";</script>
+                ";
         } else {
-            echo "Error updating record: " . mysqli_error($conn);
-        }
+
+          }
         mysqli_close($conn);
 
   }else{
-      echo "<br><br>Campos Vacios";
+      
   }
 ?>
 
@@ -51,8 +51,8 @@ if (true)
              } 
          else 
              {  /*renombrar archivo*/
-                  move_uploaded_file($_FILES["file"]["tmp_name"], "../upload/" . $_FILES["file"]["name"]);
-                    rename("../upload/".$_FILES["file"]["name"],"../upload/".$id.".jpg"  );
+                  move_uploaded_file($_FILES["file"]["tmp_name"], "../img/upload/" . $_FILES["file"]["name"]);
+                    rename("../img/upload/".$_FILES["file"]["name"],"../img/upload/".$id.".jpg"  );
             }
          }
    } 

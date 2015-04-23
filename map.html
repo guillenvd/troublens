@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+// This example adds a marker to indicate the position
+// of Bondi Beach in Sydney, Australia
+function initialize() {
+  var mapOptions = {
+    zoom: 15,
+    center: new google.maps.LatLng(31.8058553,-116.5909399)
+  }
+  var map = new google.maps.Map(document.getElementById('googleMap'),
+                                mapOptions);
+
+  var image = 'img/favicon-55.png';
+  var myLatLng = new google.maps.LatLng(31.8058553,-116.5909399);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+
+  var infowindow = new google.maps.InfoWindow({ content:"<center><b><ins>INSTITUTO TECNOLÓGICO DE ENSENADA</ins></b><br> UNIVERIIDAD DE INGENERIA Y LICENCIATURA.<center   >" });
+  google.maps.event.addListener(beachMarker, 'click', function(){ infowindow.open(map,beachMarker); });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="googleMap" style="width:750px;height:380px;"></div>
+</body>
+
+</html>
