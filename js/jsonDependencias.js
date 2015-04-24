@@ -16,8 +16,7 @@ function JsonDependencias(){
                             '<h1>'+item.nombre+'</h1>'+
                             '<p class="direc">Dirección: '+item.direccion+'<br>Telefono: '+item.telefono+'<br> Correo: '+item.correo+'</p>'+
                         '</div>'+
-                        '<br>'+
-                   ' </section>';
+                   ' </section>'
                                       output.append(landmark);
                                  });                           
 getLocation();
