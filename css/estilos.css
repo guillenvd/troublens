@@ -214,6 +214,9 @@ section#directorio{
 	margin: 3em 3em -2em 3em;
 	display: block;
 	padding-bottom: 7em;	
+	border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px;
 }
 
 section#directorio img.logo{
