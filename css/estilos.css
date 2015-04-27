@@ -217,6 +217,7 @@ section#directorio{
 	border-radius: 25px;
     border: 2px solid #8AC007;
     padding: 20px;
+    background-color: white;
 }
 
 section#directorio img.logo{
