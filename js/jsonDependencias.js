@@ -1,11 +1,15 @@
 function JsonDependencias(){
-        var x="";
+    var loc = window.location;
+    var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+    var host = loc.href.substring(0, loc.href.length - ((loc.pathname + loc.search + loc.hash).length - pathName.length));
+
+    var x="";
        var req = $.ajax({
                     type: "POST",
                     dataType: "json",
                     timeout : 10000,
                     beforeSend: function() { },
-                    url: "http://localhost/troublens-web/php/dependencias.php", 
+                    url: host+"php/dependencias.php", 
                     data: x,
                     success: function(data) {
                                 var output = $('#Layer1');

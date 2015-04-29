@@ -23,7 +23,7 @@
 }
 
 body{
-	background: #FFFFFA;
+	background: url(../img/bg-body.png);
 	font-family: SourceSansPro-Regular, "Source Sans Pro", Helvetica;
 }
 
@@ -86,46 +86,74 @@ header nav ul li a:hover {
 	background: #00de96;
 	height: .8em;
 }
+
+section#centrar{
+	text-align: center;
+	margin: 0  auto;
+	width: 60%;
+	height: auto;
+	padding-top: 1em;
+}
+
 section#contenido{
 	padding-top: .5px;
-	background: #fff;
-	width: 100%;
 	height: auto;
-}	
-section .noticia h1, p{
-	text-align: center;
-	
+	width: 90%;
+	margin: 0  auto;
 }
+
+
+div.noticia {
+	width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: .3em;
+    padding: 1em;
+    background: #FFF;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid #BDC2C9;
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(179,179,179,1);
+	-moz-box-shadow: 0px 1px 5px 1px rgba(179,179,179,1);
+	box-shadow: 0px 1px 5px 1px rgba(179,179,179,1);
+}
+
 section a{
 	font-weight: normal;
 }
-.noticia img{
-	float: left;
-	width: 10%;
-    height: 100%;
+
+div.noticia img.notimg{
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC2C9;
 }
-.noticia {
-	width: 100%;
-	height: 5em;
-	background: #FFF;
-	border-bottom: 0.1em inset #abc1b2;
+
+section .noticia h1{
+	text-align: center;
+	font-size: 2em;
+}
+section .noticia p{
+	text-align: left;
+	padding: 0 1em 0 1em;
 }
 
 .noticia:hover{
-		background: #f4f4f4;
-	}
+		background: #FAFAFA;
+}
 
 footer{
-	position:fixed; 
-	bottom:0px; 
-	left:0px; 
-	width:100%; 
+	margin-top: 5em;
+	padding: .8em;
 	color:#CCC; 
 	background: #333; 
-	padding:5px;
 	text-align: center;
 }
 
+footer div.visitas{
+	display: inline-block;
+	bac
+}
 .fade{
     opacity: 1;
     filter:  alpha(opacity=10);
@@ -152,7 +180,10 @@ footer{
 =======
 >>>>>>> 943007fd12f9ba8c573c517355e2bc2e4522c798
 /*--------------------------------FORMULARIO REGISTRO-----------------------*/
-
+	section#contenido-form{
+		text-align: center;
+	}
+	
 	section#contenido-form section#formulario{
 	width: 50%;
 	margin: 0 auto;
@@ -160,9 +191,7 @@ footer{
 	color: #1b201f;
 	}
 
-	section#contenido-form{
-		text-align: center;
-	}
+	
 
 	section#formulario{ 
 		/*background: #c3c3c3;*/
