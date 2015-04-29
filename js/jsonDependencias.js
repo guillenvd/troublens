@@ -14,13 +14,12 @@ function JsonDependencias(){
                        '<div onclick="initialize('+item.latitud+','+item.longitud+',\''+item.nombre+'\');">'+
                             '<img src="img/directorio/bomberios1.png" class="logo">'+
                             '<h1>'+item.nombre+'</h1>'+
-                            '<p class="direc">Dirección:'+item.direccion+'<br>Telefono:'+item.telefono+'<br> Correo: '+item.correo+'</p>'+
+                            '<p class="direc">Dirección: '+item.direccion+'<br>Telefono: '+item.telefono+'<br> Correo: '+item.correo+'</p>'+
                         '</div>'+
-                        '<br>'+
-                   ' </section>';
+                   ' </section>'
                                       output.append(landmark);
                                  });                           
-                        getLocation();
+getLocation();
                              }, 
                     error: function() {
                             //do something
