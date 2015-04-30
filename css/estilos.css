@@ -268,20 +268,6 @@ section#directorio p.direc{
 	color: #585858;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------------- RESPONSIVE DESIGN-----------------------*/
 
 @media screen and (max-width: 800px){
@@ -291,7 +277,7 @@ section#directorio p.direc{
 	}
 	
 	header nav{
-		width: 35%;
+		width: 30%;
 		height: 100%;
 		left: -100%;
 		margin: 0;
@@ -332,6 +318,7 @@ section#directorio p.direc{
 			-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
+
 	.menu_bar span{
 		display: block;
 	}
@@ -394,66 +381,49 @@ section#directorio p.direc{
 		display: block;
 	}
 
-	section .noticia h1, p{
-		text-align: center;
-	}
-
-	.noticia {
+	section#centrar{
 		width: 100%;
-		height: 5em	;
-		background: #FFF;
-		border-bottom: 0.1em inset #abc1b2;
-	}
-	.noticia:hover{
-		background: #f4f4f4;
-	}
-	.noticia img{
-		float: left;
-		width: 10%;
-    	height: 100%;
-	}
-}
-
-@media screen and (max-width: 650px){
-	.noticia img{
-		width: 20%;
-		height: 100%;
-	}
-	section .noticia h1, p{
-		font-size: 15px;
-	}
-	.noticia {
-		height: 6em	;
 	}
 
-}
+	section#contenido{
+		width: 95%;
+	}
 
-@media screen and (max-width: 350px){
-	header a img{
+	div.noticia{
+		width: 90%;
+	}
+
+	div.noticia img.notimg{
 		width: 70%;
 	}
-	section{
-		padding-top: 7em;
-	}
-	section#formulario{
-		padding-top: 10px;
+}
+
+@media screen and (max-width: 400px){
+	header nav{
+		width: 200px;
 	}
 
-	.noticia img{
-		width: 20%;
-		height: 100%
+	div.noticia img.notimg{
+		width: 100%;
 	}
-	
-	section .noticia p{
-		font-size: 12px;
-	}
-
-	input{
-		width: 20em;
-	}
-	.btn{
-		width: 25em;
-	}
-
 
 }
+@media screen and (max-width: 335px){
+		
+	header nav{
+		width: 150px;
+	}	
+
+	header div a img{
+		width: 170px;
+	}
+
+	section .noticia h1{
+		font-size: 1.5em;	
+	}
+
+	section .noticia p{
+		font-size: .8em;	
+	}
+}
+/*-------------------------------- FIN RESPONSIVE DESIGN-----------------------*/
