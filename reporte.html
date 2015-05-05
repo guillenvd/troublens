@@ -13,7 +13,7 @@
 		<div class="colores"></div>
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" href="css/acerca.css">
+	<link rel="stylesheet" type="text/css" href="css/styleImg.css">
 	<link href="css/styleImg.css" rel="stylesheet">
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/script.js"></script>
@@ -24,17 +24,25 @@
         </nav>  
 	</header>
 	<!-- /header -->
-<section id="contenido-form" style="display: none">
+<section id="contenido-form">
 <br>
 		<section id="formulario">
-			<form action="php/uploadphp.php" enctype="multipart/form-data"  method="post" >
-				<label for="titulo">Título<span class="required"></span></label> 
-		    <input type="text" name="titulo" required autofocus />
-		    <label for="descripcion">Descripción<span class="required"></span></label> 
-		    <textarea name="description" id="descripcion"></textarea>
-		    <label for="pass">Lugar<span class="required"></span></label>
-		    <input type="password" id="passwd" name="passwd" value="" required="required" /> 
-		    <input class="btn" type="submit" value="Enviar" id="submit" />
+		  <label for="foto" id="fotolabel">Añade una foto</label>
+			<form action="php/reporte.php" enctype="multipart/form-data"  method="post" >
+				<div id="preview">
+        	<img id="previewimg" src="img/user.png">
+        	<img id="deleteimg" width="50px;" src="img/delete.png">
+    		</div>
+    		<div id="upload" >
+        	<input id="file" name="file" type="file" >
+    		</div>
+				<label for="titulo">Título</label> 
+		    <input type="text" name="titulo" required autofocus>
+		    <label for="descripcion">Descripción</label> 
+		    <textarea name="descripcion" id="descripcion" maxlength="140" required></textarea>
+		    <label for="direccion">Dirección</label>
+		    <input type="text" name="direccion" required>
+		    <input class="btn" type="submit" value="Reportar" id="submit" />
 			</form>
 		</section>
 </section>

@@ -217,7 +217,7 @@ footer div.visitas{
 		text-align: left;
 	}
 
-	input{
+	input, textarea{
 		width: 95%;
 		height: 20px;
 		padding: 7px;
@@ -236,9 +236,20 @@ footer div.visitas{
 		font-weight: bold;
 	}
 
-	section#formulario label, input{
+	.btn1 {
+		margin: 5px;
+		float: right;
+		width: 10em;
+		height: 3.5em;
+		background: #FFBF00;
+		font-weight: bold;	
+	}
+
+	section#formulario label, input, textarea{
 		display: block;
 	}
+
+	textarea { height: 110px; }
 
 /*--------------------CONTENIDO DEL DIRECTORIO --------------*/
 
@@ -361,7 +372,7 @@ section#directorio p.direc{
 		text-align: left;
 	}
 
-	input{
+	input, textarea{
 		width: 95%;
 		height: 20px;
 		padding: 7px;
@@ -380,7 +391,7 @@ section#directorio p.direc{
 		font-weight: bold;
 	}
 
-	section#formulario label, input{
+	section#formulario label, input, textarea{
 		display: block;
 	}
 
