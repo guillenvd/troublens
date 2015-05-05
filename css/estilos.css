@@ -88,23 +88,31 @@ header nav ul li a:hover {
 }
 
 section#centrar{
-	text-align: center;
-	margin: 0  auto;
-	width: 60%;
-	height: auto;
-	padding-top: 1em;
+  margin: 0em auto;
+  padding: 0;
+  text-align: center;
+  border-radius: 0.5em;
 }
 
-section#contenido{
-	padding-top: .5px;
-	height: auto;
-	width: 90%;
-	margin: 0  auto;
+section#contenido,  aside{
+ /* background-color: #FBF210;*/
+  border-radius: .5em;
+  display: inline-block;
+  margin: 0.25em auto;
+  padding: 0.25em;
+  text-align: center;
+  vertical-align: top;
+  width: 75%;
+}
+
+aside{
+  width: 20%;
+  background: #FAFAFA;
 }
 
 
 div.noticia {
-	width: 100%;
+	width: 70%;
     height: auto;
     margin: 0 auto;
     margin-top: .3em;
@@ -129,17 +137,18 @@ div.noticia img.notimg{
     border: 2px solid #BDC2C9;
 }
 
-section .noticia h1{
+.noticia h1{
 	text-align: center;
 	font-size: 2em;
 }
-section .noticia p{
+
+.noticia p{
 	text-align: left;
 	padding: 0 1em 0 1em;
 }
 
-.noticia:hover{
-		background: #FAFAFA;
+section#contenido .noticia:hover{
+		background: #FBFBFA;
 }
 
 footer{
@@ -396,6 +405,11 @@ section#directorio p.direc{
 	div.noticia img.notimg{
 		width: 70%;
 	}
+
+	aside{
+  		width: 85%;
+	}
+
 }
 
 @media screen and (max-width: 400px){
@@ -406,7 +420,9 @@ section#directorio p.direc{
 	div.noticia img.notimg{
 		width: 100%;
 	}
-
+	section#contenido, aside{
+		width: 95%;
+	}
 }
 @media screen and (max-width: 335px){
 		
@@ -425,5 +441,17 @@ section#directorio p.direc{
 	section .noticia p{
 		font-size: .8em;	
 	}
+
+	section#contenido .noticia{
+		width: 235px;
+		margin-bottom: 15px;	
+	}
+
+	section#contenido, aside{
+		width: 300px;
+	}
+
+
+
 }
 /*-------------------------------- FIN RESPONSIVE DESIGN-----------------------*/
