@@ -39,3 +39,11 @@
     	transform: rotate(360deg); 
     }
 }
+
+textarea#descripcion {
+  width: 95%;
+  height: 150px;
+  border-radius: 0.5em;
+  border: 2px solid #BDC2C9;
+  padding: 7px;s
+}
