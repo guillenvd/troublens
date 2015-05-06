@@ -110,6 +110,32 @@ aside{
   background: #FAFAFA;
 }
 
+aside div#reportar{
+	background: #00eba6;
+	border-radius: 5em;
+	-webkit-box-shadow: 0px 1px 5px 1px rgba(179,179,179,1);
+	-moz-box-shadow: 0px 1px 3px 1px rgba(179,179,179,1);
+	box-shadow: 0px 1px 3px 1px rgba(179,179,179,1);
+	opacity: 1;
+    filter:  alpha(opacity=10);
+        -ms-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        -wekit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#reportar:hover{
+	background: #04B4AE;
+	opacity: 0.9;
+    filter:  alpha(opacity=7);
+        -ms-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out
+        -wekit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
 
 div.noticia {
 	width: 70%;
@@ -390,6 +416,7 @@ section#directorio p.direc{
 		background: #FFBF00;
 		font-weight: bold;
 	}
+
 
 	section#formulario label, input, textarea{
 		display: block;
