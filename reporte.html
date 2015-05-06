@@ -25,24 +25,17 @@
 	</header>
 	<!-- /header -->
 <section id="contenido-form">
-<br>
 		<section id="formulario">
-		  <label for="foto" id="fotolabel">Añade una foto</label>
 			<form action="php/reporte.php" enctype="multipart/form-data"  method="post" >
-				<div id="preview">
-        	<img id="previewimg" src="img/user.png">
-        	<img id="deleteimg" width="50px;" src="img/delete.png">
-    		</div>
-    		<div id="upload" >
-        	<input id="file" name="file" type="file" >
-    		</div>
 				<label for="titulo">Título</label> 
-		    <input type="text" name="titulo" required autofocus>
-		    <label for="descripcion">Descripción</label> 
-		    <textarea name="descripcion" id="descripcion" maxlength="140" required></textarea>
-		    <label for="direccion">Dirección</label>
-		    <input type="text" name="direccion" required>
-		    <input class="btn" type="submit" value="Reportar" id="submit" />
+			    <input type="text" name="titulo" required autofocus>
+			    <label for="descripcion">Descripción</label> 
+			    <textarea name="descripcion" id="descripcion" maxlength="140" required></textarea>
+			    <label for="direccion">Dirección</label>
+			    <input type="text" name="direccion" required>
+			    <label for="imagen">Añade una foto</label>
+			    <input type="file" name="img">
+			    <input class="btn" type="submit" value="Reportar" id="submit" />
 			</form>
 		</section>
 </section>
@@ -50,7 +43,6 @@
 <script src="js/menu.js"></script>
 <script type="text/javascript">
      $("#contenido-form" ).show("slow");
-
 </script>
 </body>
 </html>

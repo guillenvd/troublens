@@ -3,6 +3,9 @@
 
 	$query = "INSERT INTO reportes (titulo, descripcion, direccion) VALUES ('" . $_POST['titulo'] . "', '" . $_POST['descripcion'] . "', '" . $_POST['direccion'] . "')";
 
-	$conexion->query($query);
+	if ($conexion->query($query)) {
+		echo '<script> location.href="../index.html"; </script>';
+	}
+
 	$conexion->close();
 ?>
