@@ -1,0 +1,74 @@
+#form{
+width:43%;
+float:left
+}
+#preview{
+    width: 50%;
+    margin-top: 1em;
+    float: right;
+    display: none;
+    margin-right: 1em;
+    margin-bottom: 3em;
+}
+#previewimg{
+    width: 50%;
+    margin-top: 1em;
+    float: right;
+    margin-right: 1em;
+    margin-bottom: 3em;
+}
+#file{
+opacity:0;
+width:115px;
+height:115px;
+
+}
+
+
+div#img{
+width:200px;
+height:200px
+}
+
+#deleteimg{
+    width: 8%;
+    margin-top: -.8em;
+    float: right;
+}
+.click{
+    margin top:-50px;
+    font-size: 16px;
+    color:#00EBA6;
+    /*text-shadow: 2px 2px 8px #000000;*/
+}
+
+#addphoto{
+margin-right: 1em;
+}
+
+
+#upload{
+    background-image: url(../img/add-photo55.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    margin-top: .2em;
+    float: right;
+}
+
+#fotolabel {
+    text-align: right;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: .6em;
+}
+
+.btnr{
+    margin: 0 auto;
+    margin-top: 2em;
+    float: left;
+    width: 20em;
+    height: 3em;
+    background: #FFBF00;
+    font-weight: bold;
+}

@@ -13,8 +13,8 @@
 		<div class="colores"></div>
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/styleImg.css">
-	<link href="css/styleImg.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styleImg-reportes.css">
+	<link href="css/styleImg-reportes.css" rel="stylesheet">
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
@@ -25,19 +25,29 @@
 	</header>
 	<!-- /header -->
 <section id="contenido-form">
-		<section id="formulario">
-			<form action="php/reporte.php" enctype="multipart/form-data"  method="post" >
-				<label for="titulo">Título</label> 
-			    <input type="text" name="titulo" required autofocus>
-			    <label for="descripcion">Descripción</label> 
-			    <textarea name="descripcion" id="descripcion" maxlength="140" required></textarea>
-			    <label for="direccion">Dirección</label>
-			    <input type="text" name="direccion" required>
-			    <label for="imagen">Añade una foto</label>
-			    <input type="file" name="img">
-			    <input class="btn" type="submit" value="Reportar" id="submit" />
-			</form>
-		</section>
+<br>
+	<section id="formulario">
+		<h1>FORMULARIO PARA REPORTE <br><br></h1>
+		<form action="php/reporte.php" enctype="multipart/form-data"  method="post">
+			<label for="titulo">Título:</label> 
+		    <input type="text" name="titulo" required autofocus>
+		    <label for="descripcion">Descripción:</label> 
+		    <textarea name="descripcion" id="descripcion" maxlength="140" required></textarea>
+		    <label for="direccion">Dirección:</label>
+		    <input type="text" name="direccion" required>
+			<div id="preview">
+        		<img id="previewimg" src="img/user.png">
+        		<img id="deleteimg" width="50px;" src="img/delete.png">
+    		</div>
+    		<input class="btnr" type="submit" value="Reportar" id="submit" />
+    		<section id="addphoto">
+	    		<div id="upload">
+	        		<input id="file" name="file"  type="file" />
+	    		</div>
+	    	</section>
+	    		
+	    </form>
+	</section>
 </section>
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/menu.js"></script>
