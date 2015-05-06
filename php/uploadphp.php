@@ -25,8 +25,6 @@ include("conexion.php");
           }
         mysqli_close($conn);
 
-  }else{
-      
   }
 ?>
 
