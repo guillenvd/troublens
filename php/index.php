@@ -1,7 +1,7 @@
 <?php
 	include 'conexion.php';
 
-	$query = "SELECT titulo, descripcion, direccion FROM reportes";
+	$query = "SELECT titulo, descripcion, direccion FROM reportes order by id_reporte desc";
 
 	$result = $conexion->query($query);
 
