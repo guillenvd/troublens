@@ -136,6 +136,19 @@ aside div#reportar{
     transition: all 0.5s ease-out;
 }
 
+aside div#logosp{
+	background: #0e0d0c;
+	border-radius: .5em;
+
+}
+
+aside div#logosp img{
+	width: 95%;
+	border-radius: 1.5em;
+}
+
+
+
 
 div.noticia {
 	width: 70%;
