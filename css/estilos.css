@@ -147,9 +147,6 @@ aside div#logosp img{
 	border-radius: 1.5em;
 }
 
-
-
-
 div.noticia {
 	width: 70%;
     height: auto;
@@ -170,15 +167,17 @@ section a{
 	font-weight: normal;
 }
 
-div.noticia img.notimg{
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid #BDC2C9;
-}
+
 
 .noticia h1{
 	text-align: center;
 	font-size: 2em;
+}
+
+div.noticia img.notimg{
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid #BDC2C9;
 }
 
 .noticia p{
@@ -390,11 +389,9 @@ section#directorio p.direc{
 		text-align: center;
 	}
 
-	section#formulario{ 
-		/*background: #c3c3c3;*/
-		margin: 5px;
-		width: 50%;
-		height: auto;
+
+	section#contenido-form section#formulario{ 
+		width: 80%;
 		font-size: 20px;
 	}
 
@@ -421,6 +418,9 @@ section#directorio p.direc{
   		border: 2px solid #BDC2C9;
 	}
 
+	textarea{
+		height: 8em;
+	}
 	.btn{
 		margin: 5px;
 		float: right;
@@ -429,7 +429,6 @@ section#directorio p.direc{
 		background: #FFBF00;
 		font-weight: bold;
 	}
-
 
 	section#formulario label, input, textarea{
 		display: block;
