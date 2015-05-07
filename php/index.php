@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
 		<a href=\"#\">
 		<h1>". $row['titulo'] ."</h1>
 		<img class=\"notimg\" src=\"img/upload/". $row['foto'] ."\">	
-		<p>". $row['descripcion'] ."<br> Direccion: ". $row['direccion'] ."</p>
+		<p><b>Descripción:</b><br>". $row['descripcion'] ."<br><b>Dirección:</b><br> ". $row['direccion'] ."</p>
 		</a>
 		</div>";
 	}

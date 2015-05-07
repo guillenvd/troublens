@@ -72,3 +72,13 @@ margin-right: 1em;
     background: #FFBF00;
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 400px){
+    .btnr{
+        width: 15em;
+    }
+    #upload{
+    
+    }
+}
