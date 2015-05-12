@@ -16,6 +16,7 @@
     src: url(../fonts/SourceSansPro-Bold.eot) format(eot),
          url(../fonts/SourceSansPro-Bold.svg) format(svg);
 }
+
 *{
 	margin: 0;
 	padding: 0;
@@ -102,15 +103,15 @@ section#contenido,  aside{
   padding: 0.25em;
   text-align: center;
   vertical-align: top;
-  width: 75%;
+  width: 70%;
 }
 
 aside{
-  width: 20%;
+  width: 25%;
   background: #FAFAFA;
 }
 
-aside div#reportar{
+div#reportar{
 	background: #00eba6;
 	border-radius: 5em;
 	-webkit-box-shadow: 0px 1px 5px 1px rgba(179,179,179,1);
@@ -123,6 +124,11 @@ aside div#reportar{
         -o-transition: all 0.5s ease-in;
         -wekit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
+}
+
+
+section#reportarhead{
+display:  none;
 }
 
 #reportar:hover{
@@ -347,6 +353,18 @@ section#directorio p.direc{
 		background: #00de96;
 		height: auto;
 	}
+
+
+section#reportarhead{
+	width: 65%;
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 8em;
+}
+
+aside div#reportar{
+	display: none;
+}
 	.colores{
 		height: 8px;
 		background: #00eba6 url(../img/colors-bar.png);
@@ -384,7 +402,7 @@ section#directorio p.direc{
 
 	section#contenido, section#contenido-form{
 		margin: 0 auto;
-		padding-top: 7em;
+		padding-top: 1em;
 	}
 	section#contenido-form{
 		text-align: center;
