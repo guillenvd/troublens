@@ -466,6 +466,7 @@ aside div#reportar{
 	}
 
 	div.noticia{
+        text-align: center;
 		width: 90%;
 	}
 
@@ -518,7 +519,10 @@ aside div#reportar{
 		width: 300px;
 	}
 
+   .imagen-noticia{
+    text-align: center;
 
+   }
 
 }
 /*-------------------------------- FIN RESPONSIVE DESIGN-----------------------*/
