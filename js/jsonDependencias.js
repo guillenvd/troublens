@@ -12,7 +12,7 @@
 
    var lat = position.coords.latitude;
         var long = position.coords.longitude;
-          initialize(lat,long,'Usted se encuentra aquí ahora.'); 
+          initialize(lat,long,'Usted se encuentra aquí ahora.','favicon-55.png'); 
         }
     }
 
@@ -21,7 +21,7 @@
     }
 
 
-function initialize(lat,lon,string) {
+function initialize(lat,lon,string,img) {
   var mapOptions = {
     zoom: 15,
     center: new google.maps.LatLng(lat,lon)
@@ -29,7 +29,8 @@ function initialize(lat,lon,string) {
   var map = new google.maps.Map(document.getElementById('googleMap'),
                                 mapOptions);
 
-  var image = 'img/favicon-55.png';
+  var image = 'img/directorio/'+img;
+  
   var myLatLng = new google.maps.LatLng(lat,lon);
   var beachMarker = new google.maps.Marker({
       position: myLatLng,
@@ -58,8 +59,8 @@ function JsonDependencias(){
                                 var output = $('#Layer1');
                                  $.each(data, function(i,item){
                     var landmark ='<section id="directorio" styl="Border">'+
-                       '<div onclick="initialize('+item.latitud+','+item.longitud+',\''+item.nombre+'\');">'+
-                            '<img src="img/directorio/bomberios1.png" class="logo">'+
+                       '<div onclick="initialize('+item.latitud+','+item.longitud+',\''+item.nombre+'\',\''+item.foto+'.jpg\');">'+
+                            '<img src="img/directorio/'+item.foto+'.jpg" class="logo">'+
                             '<h1>'+item.nombre+'</h1>'+
                             '<p class="direc">Dirección:'+item.direccion+'<br>Telefono:'+item.telefono+'<br> Correo: '+item.correo+'</p>'+
                         '</div>'+
