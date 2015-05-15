@@ -3,7 +3,7 @@ include 'conexion.php';
 
 $conexion->set_charset("utf8");
 
-$query = "SELECT * FROM reportes order by id_dependencia desc";
+$query = "SELECT * FROM reportes order by id_reporte desc";
 
 $result = $conexion->query($query);
 
@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
             <center>
             ".$img."
             </center>
-		<p><b>Descripción:</b><br>". $row['descripcion'] ."<br><b>Dirección:</b><br> ". $row['direccion'] ."</p> <br><b>Dependencia:</b><br> ". $row['id_dependencia'] ."</p>
+		<p><b>Descripción:</b><br>". $row['descripcion'] ."<br><b>Dirección:</b><br> ". $row['direccion'] ."</p> <br><b>Dependencia:</b><br> ". $row['tipo'] ."</p>
         </a>
 		</div>";
 	}
