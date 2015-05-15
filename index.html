@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<META charset="UTF-8">
-	<title>Menu</title>
+	<title>TROUBLENS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -19,26 +19,28 @@
 		<nav id="MenuText">
 		</nav>	
 	</header>
+	<input type="text" style="display:none;" value="0" id="tipo-get">
 	<!-- /header -->
 	<div class="col-lg-1" style="margin-left:1cm; cursor:pointer;">
 		<ul class="categorias">
-			<li class="up">Fuego</li>
-			<li>Agua</li>
-			<li>Gas</li>
-			<li>Luz</li>
-			<li>Choque</li>
-			<li>--otro--</li>
-			<li>--otro--</li>
-			<li class="down">--otro--</li>
+			<li class="up" onclick="tipo(0);">Todos</li>
+			<li onclick="tipo(1);">Fuego</li>
+			<li onclick="tipo(2);">Agua</li>
+			<li onclick="tipo(3);">Gas</li>
+			<li onclick="tipo(4);">Luz</li>
+			<li onclick="tipo(5);">Choque</li>
+			<li onclick="tipo(6);">Baches</li>
+			<li class="down" onclick="tipo(7);">Otros</li>
 		</ul>
 	</div>
-
 	<div id="contenido" class="col-lg-7">
-		
+		<p style="text-align:center;" id="loading-img">
+			<img src="img/loading.gif" height="125px" width="124px" alt="cargando datos" >
+		</p>
 	</div>
 
 	<div class="col-lg-2"><br>
-		<a href="reporte.html">
+		<a href="reporte.html" style="text-align:center;">
 			<div id="reportar">
 				<h2>Reportar</h2>
 			</div>
