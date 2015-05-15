@@ -264,6 +264,15 @@ footer div.visitas{
 		text-align: left;
 	}
 
+	select{
+	margin-left: -41em;
+	}
+
+	select option{
+		width: 8em;
+		height: 2em;
+	}
+
 	input, textarea{
 		width: 95%;
 		height: 20px;
