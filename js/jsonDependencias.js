@@ -1,3 +1,46 @@
+// This example adds a marker to indicate the position
+// of Bondi Beach in Sydney, Australia
+/*$( window ).resize(function() {
+  if( $(window).width()==800){
+  }
+});
+ */
+ function getLocation() {
+            navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
+            function foundLocation(position) {
+
+
+   var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+          initialize(lat,long,'Usted se encuentra aquí ahora.'); 
+        }
+    }
+
+    function noLocation() {
+        alert('Could not find location');
+    }
+
+
+function initialize(lat,lon,string) {
+  var mapOptions = {
+    zoom: 15,
+    center: new google.maps.LatLng(lat,lon)
+  }
+  var map = new google.maps.Map(document.getElementById('googleMap'),
+                                mapOptions);
+
+  var image = 'img/favicon-55.png';
+  var myLatLng = new google.maps.LatLng(lat,lon);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+
+  var infowindow = new google.maps.InfoWindow({ content:string });
+  google.maps.event.addListener(beachMarker, 'click', function(){ infowindow.open(map,beachMarker); });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
 function JsonDependencias(){
     var loc = window.location;
     var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
