@@ -7,12 +7,23 @@ $result = $conexion->query($query);
 
 if ($result->num_rows > 0) {
 	while ($row = $result->fetch_assoc()) {
-
+        $nombre_fichero = '../img/upload/'.$row['foto'];
+        $img="";
+        if (file_exists($nombre_fichero)) {
+           $img="
+                <a href=\"img/upload/". $row['foto'] ."\">
+                <h1>". $row['titulo'] ."</h1>
+                <img class=\"notimg\" src=\"http://localhost/troublens/img/upload/". $row['foto'] ."\"> 
+                ";
+        } 
+        else {
+          $img= "";
+        }
 		echo 
-        "<div class=\"noticia\"> <center>
-		<a href=\"img/upload/". $row['foto'] ."\">
-		<h1>". $row['titulo'] ."</h1>
-		<img class=\"notimg\" src=\"http://localhost/troublens/img/upload/". $row['foto'] ."\">	</center>
+        "<div class=\"noticia\"> 
+            <center>
+            ".$img."
+            </center>
 		<p><b>Descripción:</b><br>". $row['descripcion'] ."<br><b>Dirección:</b><br> ". $row['direccion'] ."</p>
 		</a>
 		</div>";

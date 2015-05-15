@@ -12,23 +12,13 @@ include("conexion.php");
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        $sql = "UPDATE reportes SET foto='".$id.".jpg' WHERE id_reporte='".$id."' ";
-        if (mysqli_query($conn, $sql)) {
-          echo "<script type=\"text/javascript\">
-                  alert('alta exitosa');
-                  location.href = \"../index.html\";</script>
-                ";
-        } else {
-
-          }
-        mysqli_close($conn);
+      
 
   }
 ?>
 
 <?php
-if (true)
-{ 
+ 
   $validextensions = array("jpeg", "jpg", "png");
   $temporary = explode(".", $_FILES["file"]["name"]);
   $file_extension = end($temporary);
@@ -46,12 +36,24 @@ if (true)
                   echo $_FILES["file"]["name"] . " <b>already exists.</b> ";
              } 
          else 
-             {  /*renombrar archivo*/
+             {      $sql = "UPDATE reportes SET foto='".$id.".jpg' WHERE id_reporte='".$id."' ";
                   move_uploaded_file($_FILES["file"]["tmp_name"], "../img/upload/" . $_FILES["file"]["name"]);
                     rename("../img/upload/".$_FILES["file"]["name"],"../img/upload/".$id.".jpg"  );
             }
          }
-   } 
+   }
+   else{
+      $nombre = "nope";
+      $sql = "UPDATE reportes SET foto='".$nombre.".jpg' WHERE id_reporte='".$id."' ";
+   }
+        if (mysqli_query($conn, $sql)) {
+          echo "<script type=\"text/javascript\">
+                  alert('alta exitosa');
+                  location.href = \"../index.html\";</script>
+                ";
+        } else {
 
-}
+          }
+        mysqli_close($conn);
+
 ?>
