@@ -3,16 +3,15 @@ include("conexion.php");
   if(isset($_POST['titulo']) && !empty($_POST['titulo']) && 
      isset($_POST['descripcion']) && !empty($_POST['descripcion']) &&
      isset($_POST['direccion']) && !empty($_POST['direccion']))
-  {
-      $conexion = mysql_connect($host, $user, $pw, $db) or die ("Problemas en Conexion");
-      mysql_select_db($db, $conexion) or die("Problemas al conectar con la BD");
-      mysql_query("INSERT INTO reportes (titulo, descripcion, direccion) VALUES ('" . $_POST['titulo'] . "', '" . $_POST['descripcion'] . "', '" . $_POST['direccion'] . "')", $conexion);
-         $id = mysql_insert_id();
-        $conn = mysqli_connect($host, $user, $pw, $db);
-        if (!$conn) {
+  {    
+    $conexion = mysqli_connect($host, $user, $pw, $db);
+        if (!$conexion) {
             die("Connection failed: " . mysqli_connect_error());
         }
-      
+      mysqli_set_charset($conexion, "utf8");
+      mysqli_query($conexion,"INSERT INTO reportes (titulo, descripcion, direccion) VALUES ('" . $_POST['titulo'] . "', '" . $_POST['descripcion'] . "', '" . $_POST['direccion'] . "')");
+         $id = mysqli_insert_id($conexion);
+    
 
   }
 ?>
@@ -45,15 +44,10 @@ include("conexion.php");
    else{
       $nombre = "nope";
       $sql = "UPDATE reportes SET foto='".$nombre.".jpg' WHERE id_reporte='".$id."' ";
-   }
-        if (mysqli_query($conn, $sql)) {
-          echo "<script type=\"text/javascript\">
-                  alert('alta exitosa');
+   }echo "<script type=\"text/javascript\">
                   location.href = \"../index.html\";</script>
                 ";
-        } else {
-
-          }
-        mysqli_close($conn);
+        mysqli_query($conexion, $sql);
+        mysqli_close($conexion);
 
 ?>

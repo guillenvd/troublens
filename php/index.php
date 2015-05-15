@@ -1,6 +1,8 @@
 <?php
 include 'conexion.php';
 
+$conexion->set_charset("utf8");
+
 $query = "SELECT titulo, descripcion, direccion, foto FROM reportes order by id_reporte desc";
 
 $result = $conexion->query($query);
