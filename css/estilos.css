@@ -90,6 +90,45 @@ header nav ul li a:hover {
 	height: .8em;
 }
 
+
+ul.categorias {
+    margin: 0; 
+    padding: 0;
+    margin-top: 1em;
+    width:185px;
+    list-style-type: none;
+    background-color: #FCFCFC;
+    border: 1px solid #848484;
+    border-bottom: none;
+    border-radius: .6em;
+}
+
+ul.categorias li {
+    text-decoration: none;
+    color: #424242; 
+    padding: 9px 11px;
+    display:block;
+    border-bottom: 1px solid #848484;
+
+}
+ 
+li.up{
+	border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
+}
+
+li.down{
+	border-bottom-left-radius: .5em;
+	border-bottom-right-radius: .5em;
+}
+ 
+ul.categorias li:hover{
+    color: white;
+    background-color: #088A68;
+}
+
+
+
 section#centrar{
   margin: 0em auto;
   padding: 0;
