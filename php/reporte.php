@@ -9,7 +9,7 @@ include("conexion.php");
             die("Connection failed: " . mysqli_connect_error());
         }
       mysqli_set_charset($conexion, "utf8");
-      mysqli_query($conexion,"INSERT INTO reportes (id_dependencia,titulo, descripcion, direccion) VALUES ('" . $_POST['clasificacion'] . "','" . $_POST['titulo'] . "', '" . $_POST['descripcion'] . "', '" . $_POST['direccion'] . "')");
+      mysqli_query($conexion,"INSERT INTO reportes (tipo,titulo, descripcion, direccion) VALUES ('" . $_POST['clasificacion'] . "','" . $_POST['titulo'] . "', '" . $_POST['descripcion'] . "', '" . $_POST['direccion'] . "')");
          $id = mysqli_insert_id($conexion);
     
 
