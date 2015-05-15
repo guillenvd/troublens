@@ -333,6 +333,7 @@ section#directorio p.direc{
 	header{
 		width: 100%;
 		position: fixed;
+		margin-bottom: 10em;
 	}
 	
 	header nav{
@@ -405,6 +406,7 @@ aside div#reportar{
 		padding-top: 1em;
 	}
 	section#contenido-form{
+		padding-top: 8em;
 		text-align: center;
 	}
 
