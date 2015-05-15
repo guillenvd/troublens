@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2015 a las 17:48:39
+-- Tiempo de generación: 15-05-2015 a las 18:10:02
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -53,7 +53,7 @@ INSERT INTO `dependencia` (`id_dependencia`, `nombre`, `direccion`, `telefono`, 
 --
 
 CREATE TABLE IF NOT EXISTS `reportes` (
-  `dependencia` varchar(30) DEFAULT NULL,
+  `id_dependencia` int(11) DEFAULT NULL,
 `id_reporte` int(11) NOT NULL,
   `coordenadas` varchar(75) DEFAULT NULL,
   `foto` varchar(75) DEFAULT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `reportes` (
 -- Volcado de datos para la tabla `reportes`
 --
 
-INSERT INTO `reportes` (`dependencia`, `id_reporte`, `coordenadas`, `foto`, `descripcion`, `titulo`, `direccion`) VALUES
+INSERT INTO `reportes` (`id_dependencia`, `id_reporte`, `coordenadas`, `foto`, `descripcion`, `titulo`, `direccion`) VALUES
 (NULL, 1, NULL, '1.jpg', 'Hay un incendio en la casa de atrÃ¡s.', 'Se quemÃ³ mi casa', 'MÃ¡rtires de Rio Blanco #197'),
 (NULL, 2, NULL, '2.jpg', 'No hay agua', 'No hay agua', 'Martires rio blanco #197');
 

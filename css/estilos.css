@@ -26,6 +26,8 @@
 body{
 	background: url(../img/bg-body.png);
 	font-family: SourceSansPro-Regular, "Source Sans Pro", Helvetica;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
