@@ -7,11 +7,12 @@ $result = $conexion->query($query);
 
 if ($result->num_rows > 0) {
 	while ($row = $result->fetch_assoc()) {
+
 		echo 
-		"<div class=\"noticia\"> <center>
+        "<div class=\"noticia\"> <center>
 		<a href=\"img/upload/". $row['foto'] ."\">
 		<h1>". $row['titulo'] ."</h1>
-		<img class=\"notimg\" src=\"img/upload/". $row['foto'] ."\">	</center>
+		<img class=\"notimg\" src=\"http://localhost/troublens/img/upload/". $row['foto'] ."\">	</center>
 		<p><b>Descripción:</b><br>". $row['descripcion'] ."<br><b>Dirección:</b><br> ". $row['direccion'] ."</p>
 		</a>
 		</div>";
