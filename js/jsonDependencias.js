@@ -59,7 +59,7 @@ function JsonDependencias(){
                                 var output = $('#Layer1');
                                  $.each(data, function(i,item){
                     var landmark ='<section id="directorio" styl="Border">'+
-                       '<div onclick="initialize('+item.latitud+','+item.longitud+',\''+item.nombre+'\',\''+item.foto+'-55.PNG\');">'+
+                       '<div onclick="initialize('+item.latitud+','+item.longitud+',\''+item.nombre+'\',\''+item.foto+'-55.png\');">'+
                             '<img src="img/directorio/'+item.foto+'.jpg" class="logo">'+
                             '<h1>'+item.nombre+'</h1>'+
                             '<p class="direc">Dirección:'+item.direccion+'<br>Telefono:'+item.telefono+'<br> Correo: '+item.correo+'</p>'+
