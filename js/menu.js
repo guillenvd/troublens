@@ -23,7 +23,7 @@ function menu() {
 var stringMenu ="<ul>"+
                     "<li><a href=\"index.html\"><span class=\"icon-home3\"></span>Inicio</a></li>"+
                     "<li><a href=\"reporte.html\"><span class=\"icon-checkmark\"></span>Reportar</a></li>"+
-                    "<li><a href=\"registrar.html\"><span class=\"icon-user\"></span>¡Regístrate!</a></li>"+
+                    "<!-- <li><a href=\"registrar.html\"><span class=\"icon-user\"></span>¡Regístrate!</a></li> -->"+
                     "<li><a href=\"directorio.html\"><span class=\"icon-pencil\"></span>Directorio</a></li>"+
                     "<li><a href=\"acerca.html\"><span class=\"icon-book\"></span>Acerca</a></li>"+
                 "</ul>";

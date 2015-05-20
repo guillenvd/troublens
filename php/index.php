@@ -1,10 +1,10 @@
 <?php
 include 'conexion.php';
 function getTipo($tipo)
-{
+{ $value ="";
    switch ($tipo) {
         case 1:
-            $value ="Fuego";
+            $value ="Incendio";
             break;
         case 2:
             $value ="Agua";
@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
                 ";
         } 
         else {
-          $img= "";
+          $img= " <h1>". $row['titulo'] ."</h1>";
         }
 		echo 
         "<div class=\"noticia\"> 
@@ -67,7 +67,7 @@ if ($result->num_rows > 0) {
 } else {
 	echo
 	"<div class=\"noticia\">
-	<h1>No hay reporetes de <ins>".getTipo($_GET['input'])."</ins>  :-(</h1>
+	<h1>No hay reportes de <ins>".getTipo($_GET['input'])."</ins>  :-(</h1>
 	</div>";
 }
 

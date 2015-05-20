@@ -6,10 +6,12 @@ $(document).ready(function() {
 function main() {
     console.log("input"+document.getElementById('tipo-get').value);
     var input = document.getElementById('tipo-get').value;
-    $.get("php/index.php?input="+input, function(data, status) { $("#contenido").html(data); } );
+    $.get("php/index.php?input="+input, function(data, status) { $("#contenido").html(data);     $("#loading-img").hide();
+} );
+
 }
 function  tipo(tipo) {
-    $("#loading-img").show();
+        $("#loading-img").show();
     document.getElementById('tipo-get').value = tipo;
     main();
 }
