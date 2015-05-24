@@ -1,5 +1,3 @@
-DROP TABLE dependencia;
-
 CREATE TABLE `dependencia` (
   `id_dependencia` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(75) DEFAULT NULL,
@@ -18,8 +16,6 @@ INSERT INTO dependencia VALUES("3","Centro de policias","calle","6462366599","in
 
 
 
-DROP TABLE reportes;
-
 CREATE TABLE `reportes` (
   `tipo` int(11) DEFAULT NULL,
   `id_reporte` int(11) NOT NULL AUTO_INCREMENT,
@@ -35,9 +31,6 @@ INSERT INTO reportes VALUES("4","2","","2.jpg","Se fue la luz en mi colonia.","C
 INSERT INTO reportes VALUES("5","3","","3.jpg","Muy aparatoso","Choque en la calle delante","Delante y reforma");
 INSERT INTO reportes VALUES("2","4","","4.jpg","No hay agua desde el martes","Se fue el agua","Martires de Rio Blanco");
 
-
-
-DROP TABLE usuarios;
 
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
