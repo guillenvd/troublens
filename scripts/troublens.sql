@@ -42,10 +42,14 @@ CREATE TABLE IF NOT EXISTS `dependencia` (
 -- Volcado de datos para la tabla `dependencia`
 --
 
-INSERT INTO `dependencia` (`id_dependencia`, `nombre`, `direccion`, `telefono`, `correo`, `latitud`, `longitud`, `foto`) VALUES
-(1, 'Centro de bomberos', 'calle', '6462366599', 'insdim@gmail.com', '31.806876', '-116.589703', 'bomberos'),
-(2, 'CESPE', 'Calle 1ra', '64622369596', 'asda@gmail.com', '31.8586649', '-116.5930552', 'cespe'),
-(3, 'Centro de policias', 'calle', '6462366599', 'insdim@gmail.com', '31.80574', '-116.589477', 'policias');
+INSERT INTO `dependencia` (`id_dependencia`, `nombre`, `direccion`, `telefono`, `correo`, `latitud`, `longitud`, `foto`) 
+VALUES
+(1, 'Centro de bomberos', 'Blv. Zertuche y Blv. Tecnologico', '068', 'bomberosensenada@hotmail.com', '31.806876', '-116.589703', 'bomberos'),
+(2, 'CESPE', 'Av. Gastelum, 7ma y 8va', '172 1798', 'cespe@gmail.com', '31.8586649', '-116.5930552', 'cespe'),
+(3, 'Policia Municipal', 'Calle 9 y Espinoza', '066', 'policiamunicipal@ensenada.com', '31.80574', '-116.589477', 'policias'),
+(4, 'Policia Federal', 'Av Adolfo Lopez Mateo 1306 Centro', '176 1311', 'pfederal@hotmail.com', '31.8594794', '-116.6175144', 'policiafederal'),
+(5, 'Hospital General', 'Carretera Transpeninsular KM 111, Carlos Pacheco', '176 7600', 'hospitalgral@gmail.com', '31.824513', '-116.6002217', 'hospitalgral'),
+(6, 'Cruz Roja', 'Bulevar J. de Jesús Ampliacion Moderna', '174 4545', 'cruzroja@ensenada.com', '31.8466073', '--116.6221576', 'cruzroja');
 
 -- --------------------------------------------------------
 
@@ -69,10 +73,10 @@ CREATE TABLE IF NOT EXISTS `reportes` (
 --
 
 INSERT INTO `reportes` (`tipo`, `id_reporte`, `coordenadas`, `foto`, `descripcion`, `titulo`, `direccion`) VALUES
-(2, 1, NULL, '1.jpg', 'Hay un incendio en la casa de atrÃ¡s.', 'Se quemá mi casa', 'Mátires de Rio Blanco #197'),
+(2, 1, NULL, '1.jpg', '¡Incendio! Ayuda!', 'La casa de mis vecinos esta comenzando encenderse, parece que hay personas ahi.', 'Mátires de Rio Blanco #197, Colonia Bronce'),
 (3, 2, NULL, '2.jpg', 'No hay agua', 'No hay agua', 'Martires rio blanco #197'),
-(2, 3, NULL, 'nope.jpg', 'Descripción', 'Titulo1', 'Dirección'),
-(3, 4, NULL, 'nope.jpg', 'Descripción', 'Lluvia', 'Dirección'),
+(2, 3, NULL, '3.jpg', 'Descripción', 'Titulo1', 'Dirección'),
+(3, 4, NULL, '4.jpg', 'Descripción', 'Lluvia', 'Dirección'),
 (3, 5, NULL, '5.jpg', 'Descripción', 'Lluvia', 'Dirección');
 
 -- --------------------------------------------------------
